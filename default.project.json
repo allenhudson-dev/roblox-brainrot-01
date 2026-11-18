@@ -1,0 +1,430 @@
+{
+  "name": "noodle-brainrot-heist",
+  "tree": {
+    "$className": "DataModel",
+    "Players": {
+      "$properties": {
+        "CharacterAutoLoads": true
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      }
+    },
+    "Workspace": {
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Anchored": true,
+          "Color": [0.35, 0.65, 0.3],
+          "Locked": true,
+          "Material": "Grass",
+          "Position": [0, -10, 0],
+          "Size": [320, 20, 320]
+        }
+      },
+      "Conveyor": {
+        "$className": "Folder",
+        "Belt": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.25, 0.25, 0.28],
+            "Material": "Metal",
+            "Position": [0, 0.5, 0],
+            "Size": [150, 1, 12]
+          }
+        },
+        "RailNorth": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.85, 0.65, 0.15],
+            "Material": "Metal",
+            "Position": [0, 1.4, -6.5],
+            "Size": [150, 1, 1]
+          }
+        },
+        "RailSouth": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.85, 0.65, 0.15],
+            "Material": "Metal",
+            "Position": [0, 1.4, 6.5],
+            "Size": [150, 1, 1]
+          }
+        },
+        "Arrow1": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [1, 0.85, 0.2],
+            "Position": [-50, 1.1, 0],
+            "Size": [4, 0.2, 6]
+          }
+        },
+        "Arrow2": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [1, 0.85, 0.2],
+            "Position": [-20, 1.1, 0],
+            "Size": [4, 0.2, 6]
+          }
+        },
+        "Arrow3": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [1, 0.85, 0.2],
+            "Position": [10, 1.1, 0],
+            "Size": [4, 0.2, 6]
+          }
+        },
+        "Arrow4": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [1, 0.85, 0.2],
+            "Position": [40, 1.1, 0],
+            "Size": [4, 0.2, 6]
+          }
+        },
+        "Arrow5": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [1, 0.85, 0.2],
+            "Position": [65, 1.1, 0],
+            "Size": [4, 0.2, 6]
+          }
+        },
+        "NoodleOMatic": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.95, 0.45, 0.1],
+            "Material": "Metal",
+            "Position": [-82, 6, 0],
+            "Size": [10, 12, 14]
+          }
+        },
+        "NoodleOMaticChimney": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.4, 0.4, 0.45],
+            "Material": "Metal",
+            "Position": [-82, 14, -3],
+            "Size": [3, 5, 3]
+          }
+        },
+        "ExitChute": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.5, 0.5, 0.55],
+            "Material": "Metal",
+            "Position": [82, 3, 0],
+            "Size": [6, 6, 14]
+          }
+        }
+      },
+      "Spawn": {
+        "$className": "Folder",
+        "Pad": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.9, 0.9, 0.9],
+            "Material": "Concrete",
+            "Position": [0, 0.5, 78],
+            "Size": [26, 1, 18]
+          }
+        },
+        "SpawnLocation": {
+          "$className": "SpawnLocation",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.2, 0.8, 0.3],
+            "Duration": 0,
+            "Enabled": true,
+            "Neutral": true,
+            "Position": [0, 1, 78],
+            "Size": [10, 1, 10]
+          }
+        },
+        "PostL": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.6, 0.4, 0.2],
+            "Position": [-12, 3, 86],
+            "Size": [1, 6, 1]
+          }
+        },
+        "PostR": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [0.6, 0.4, 0.2],
+            "Position": [12, 3, 86],
+            "Size": [1, 6, 1]
+          }
+        },
+        "WelcomeSign": {
+          "$className": "Part",
+          "$properties": {
+            "Anchored": true,
+            "Color": [1, 0.85, 0.2],
+            "Position": [0, 6.5, 86],
+            "Size": [24, 3, 0.5]
+          }
+        }
+      },
+      "Bases": {
+        "$className": "Folder",
+        "Base1": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.47, 0.47], "Material": "Concrete", "Position": [-72, 0.5, -40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-72, 3, -48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-81.5, 3, -40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-62.5, 3, -40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-78.5, 3, -32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-65.5, 3, -32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [-72, 3, -32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [-72, 4.5, -47.4], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 1", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-78, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-72, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-66, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-78, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-72, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-66, 1.15, -36], "Size": [3, 0.3, 3] } } }
+        },
+        "Base2": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.47, 0.71, 1], "Material": "Concrete", "Position": [-24, 0.5, -40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-24, 3, -48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-33.5, 3, -40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-14.5, 3, -40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-30.5, 3, -32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-17.5, 3, -32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [-24, 3, -32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [-24, 4.5, -47.4], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 2", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-30, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-24, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-18, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-30, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-24, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-18, 1.15, -36], "Size": [3, 0.3, 3] } } }
+        },
+        "Base3": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.47, 0.86, 0.55], "Material": "Concrete", "Position": [24, 0.5, -40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [24, 3, -48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [14.5, 3, -40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [33.5, 3, -40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [17.5, 3, -32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [30.5, 3, -32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [24, 3, -32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [24, 4.5, -47.4], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 3", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [18, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [24, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [30, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [18, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [24, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [30, 1.15, -36], "Size": [3, 0.3, 3] } } }
+        },
+        "Base4": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.82, 0.35], "Material": "Concrete", "Position": [72, 0.5, -40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [72, 3, -48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [62.5, 3, -40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [81.5, 3, -40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [65.5, 3, -32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [78.5, 3, -32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [72, 3, -32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [72, 4.5, -47.4], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 4", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [66, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [72, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [78, 1.15, -44], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [66, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [72, 1.15, -36], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [78, 1.15, -36], "Size": [3, 0.3, 3] } } }
+        },
+        "Base5": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.78, 0.55, 1], "Material": "Concrete", "Position": [-72, 0.5, 40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-72, 3, 48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-81.5, 3, 40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-62.5, 3, 40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-78.5, 3, 32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-65.5, 3, 32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [-72, 3, 32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [-72, 4.5, 47.4], "Rotation": [0, 180, 0], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 5", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-78, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-72, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-66, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-78, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-72, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-66, 1.15, 44], "Size": [3, 0.3, 3] } } }
+        },
+        "Base6": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.63, 0.35], "Material": "Concrete", "Position": [-24, 0.5, 40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-24, 3, 48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-33.5, 3, 40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-14.5, 3, 40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-30.5, 3, 32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [-17.5, 3, 32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [-24, 3, 32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [-24, 4.5, 47.4], "Rotation": [0, 180, 0], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 6", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-30, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-24, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-18, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-30, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-24, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [-18, 1.15, 44], "Size": [3, 0.3, 3] } } }
+        },
+        "Base7": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.35, 0.86, 0.82], "Material": "Concrete", "Position": [24, 0.5, 40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [24, 3, 48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [14.5, 3, 40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [33.5, 3, 40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [17.5, 3, 32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [30.5, 3, 32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [24, 3, 32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [24, 4.5, 47.4], "Rotation": [0, 180, 0], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 7", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [18, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [24, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [30, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [18, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [24, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [30, 1.15, 44], "Size": [3, 0.3, 3] } } }
+        },
+        "Base8": {
+          "$className": "Folder",
+          "Floor": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.51, 0.78], "Material": "Concrete", "Position": [72, 0.5, 40], "Size": [20, 1, 16] } },
+          "BackWall": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [72, 3, 48], "Size": [20, 6, 1] } },
+          "SideWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [62.5, 3, 40], "Size": [1, 6, 16] } },
+          "SideWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [81.5, 3, 40], "Size": [1, 6, 16] } },
+          "FrontWallL": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [65.5, 3, 32], "Size": [7, 6, 1] } },
+          "FrontWallR": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.92, 0.92, 0.95], "Position": [78.5, 3, 32], "Size": [7, 6, 1] } },
+          "Door": { "$className": "Part", "$properties": { "Anchored": true, "CanCollide": false, "Color": [0.47, 0.78, 0.47], "Position": [72, 3, 32], "Size": [6, 5, 1], "Transparency": 0.75 } },
+          "OwnerSign": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 1, 1], "Position": [72, 4.5, 47.4], "Rotation": [0, 180, 0], "Size": [10, 3, 0.5] },
+            "SignGui": { "$className": "SurfaceGui", "$properties": { "Face": "Front" },
+              "SignText": { "$className": "TextLabel", "$properties": { "BackgroundTransparency": 1, "Size": { "UDim2": [[1, 0], [1, 0]] }, "Text": "Base 8", "TextColor3": [0.1, 0.1, 0.1], "TextScaled": true } } } },
+          "Slots": { "$className": "Folder",
+            "Slot1": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [66, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot2": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [72, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot3": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [78, 1.15, 36], "Size": [3, 0.3, 3] } },
+            "Slot4": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [66, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot5": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [72, 1.15, 44], "Size": [3, 0.3, 3] } },
+            "Slot6": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.3, 0.3, 0.35], "Position": [78, 1.15, 44], "Size": [3, 0.3, 3] } } }
+        }
+      },
+      "Decor": {
+        "$className": "Folder",
+        "Tree1Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [-105, 3, -70], "Size": [2, 6, 2] } },
+        "Tree1Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.15, 0.55, 0.2], "Position": [-105, 8, -70], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree2Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [105, 3, -70], "Size": [2, 6, 2] } },
+        "Tree2Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.15, 0.55, 0.2], "Position": [105, 8, -70], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree3Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [-105, 3, 70], "Size": [2, 6, 2] } },
+        "Tree3Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.6, 0.25], "Position": [-105, 8, 70], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree4Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [105, 3, 70], "Size": [2, 6, 2] } },
+        "Tree4Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.6, 0.25], "Position": [105, 8, 70], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree5Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [0, 3, -75], "Size": [2, 6, 2] } },
+        "Tree5Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.15, 0.55, 0.2], "Position": [0, 8, -75], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree6Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [-48, 3, 70], "Size": [2, 6, 2] } },
+        "Tree6Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.6, 0.25], "Position": [-48, 8, 70], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree7Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [48, 3, 70], "Size": [2, 6, 2] } },
+        "Tree7Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.15, 0.55, 0.2], "Position": [48, 8, 70], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "Tree8Trunk": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.45, 0.3, 0.15], "Position": [115, 3, 0], "Size": [2, 6, 2] } },
+        "Tree8Leaves": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.6, 0.25], "Position": [115, 8, 0], "Shape": "Ball", "Size": [7, 7, 7] } },
+        "NoodleBowlBase": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.9, 0.3, 0.3], "Position": [-45, 1.5, -22], "Shape": "Cylinder", "Size": [3, 6, 6] } },
+        "NoodleBowlNoodles": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.85, 0.3], "Position": [-45, 3.5, -22], "Size": [5, 1, 5] } },
+        "NoodleBowlChopstick": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.6, 0.4, 0.2], "Position": [-43, 5, -22], "Rotation": [0, 0, 30], "Size": [0.6, 5, 0.6] } },
+        "PickleBody": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.35, 0.7, 0.25], "Position": [45, 3, -22], "Shape": "Ball", "Size": [5, 7, 5] } },
+        "PickleStem": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.45, 0.15], "Position": [45, 7, -22], "Size": [1, 2, 1] } },
+        "PicklePlinth": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.8, 0.8, 0.85], "Position": [45, 0.5, -22], "Size": [7, 1, 7] } },
+        "SofaSeat": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.55, 0.35, 0.6], "Position": [-45, 1.5, 22], "Size": [8, 3, 5] } },
+        "SofaBack": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.55, 0.35, 0.6], "Position": [-45, 3.5, 24], "Size": [8, 4, 1.5] } },
+        "SofaSpud": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.75, 0.6, 0.35], "Position": [-45, 4.5, 22], "Shape": "Ball", "Size": [3, 3, 3] } },
+        "MoonPieBase": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.9, 0.75, 0.5], "Position": [45, 1, 22], "Shape": "Cylinder", "Size": [2, 6, 6] } },
+        "MoonPieCream": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.98, 0.9], "Position": [45, 2.2, 22], "Shape": "Cylinder", "Size": [0.8, 6.4, 6.4] } },
+        "MoonPieTop": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.9, 0.75, 0.5], "Position": [45, 3.4, 22], "Shape": "Cylinder", "Size": [2, 6, 6] } },
+        "Lamp1Pole": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.2, 0.25], "Position": [-60, 3.5, 10], "Size": [0.6, 7, 0.6] } },
+        "Lamp1Head": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon", "Position": [-60, 7.3, 10], "Size": [1.6, 1, 1.6] } },
+        "Lamp2Pole": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.2, 0.25], "Position": [-30, 3.5, -10], "Size": [0.6, 7, 0.6] } },
+        "Lamp2Head": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon", "Position": [-30, 7.3, -10], "Size": [1.6, 1, 1.6] } },
+        "Lamp3Pole": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.2, 0.25], "Position": [0, 3.5, 10], "Size": [0.6, 7, 0.6] } },
+        "Lamp3Head": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon", "Position": [0, 7.3, 10], "Size": [1.6, 1, 1.6] } },
+        "Lamp4Pole": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.2, 0.25], "Position": [30, 3.5, -10], "Size": [0.6, 7, 0.6] } },
+        "Lamp4Head": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon", "Position": [30, 7.3, -10], "Size": [1.6, 1, 1.6] } },
+        "Lamp5Pole": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.2, 0.25], "Position": [60, 3.5, 10], "Size": [0.6, 7, 0.6] } },
+        "Lamp5Head": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon", "Position": [60, 7.3, 10], "Size": [1.6, 1, 1.6] } },
+        "Lamp6Pole": { "$className": "Part", "$properties": { "Anchored": true, "Color": [0.2, 0.2, 0.25], "Position": [-90, 3.5, 10], "Size": [0.6, 7, 0.6] } },
+        "Lamp6Head": { "$className": "Part", "$properties": { "Anchored": true, "Color": [1, 0.9, 0.4], "Material": "Neon", "Position": [-90, 7.3, 10], "Size": [1.6, 1, 1.6] } }
+      }
+    },
+    "Lighting": {
+      "$properties": {
+        "Ambient": [0.5, 0.5, 0.5],
+        "Brightness": 3,
+        "ClockTime": 14,
+        "FogEnd": 1200,
+        "GeographicLatitude": 35,
+        "GlobalShadows": true,
+        "OutdoorAmbient": [0.7, 0.7, 0.7],
+        "Outlines": false,
+        "Technology": "ShadowMap"
+      },
+      "Sky": {
+        "$className": "Sky",
+        "$properties": {
+          "CelestialBodiesShown": true,
+          "StarCount": 3000
+        }
+      }
+    },
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
+    }
+  }
+}
